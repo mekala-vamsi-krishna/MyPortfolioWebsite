@@ -1,168 +1,219 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Roboto', open-sans;
   margin: 0;
-}
-
-h1,
-h2 {
-  margin: 0 0 1rem 0;
-  font-family: 'Roboto Condensed', 'Roboto', open-sans;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-a {
-  color: dodgerblue;
-  text-decoration: none;
-}
-
-a:active,
-a:hover {
-  text-decoration: underline;
-}
-
-button {
-  padding: 1rem;
-  color: dodgerblue;
-  font: inherit;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-}
-
-button:hover,
-button:active {
-  background: #ffc6d9;
-}
-
-button:focus {
-  outline: none;
-}
-
-main {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  max-width: 100rem;
-  margin: auto;
-  align-items: flex-start;
-}
-
-section {
-  margin: 0 0 2rem 0;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  background: white;
-  border-radius: 10px;
-}
-
-.modal {
-  position: fixed;
-  top: 30vh;
-  left: 5%;
-  width: 90%;
-  z-index: 100;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  animation: float-in 0.3s ease-out forwards;
-  display: flex;
-  flex-direction: column;
-}
-
-.modal h2 {
-  padding: 1rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.modal p {
-  margin: 0;
-  padding: 0 1rem;
-}
-
-.modal button {
-  align-self: flex-end;
-  margin: 0.5rem;
-}
-
-#backdrop {
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.75);
-  display: none;
-  pointer-events: none;
-}
-
-#backdrop.visible {
-  display: block;
-  pointer-events: all;
-}
-
-#main-header {
-  padding: 2rem 2rem;
-  background: dodgerblue;
-  color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-}
-
-#main-header h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-#instructor-info {
-  display: flex;
-  align-items: center;
-  border-bottom: 2px solid dodgerblue;
-  padding-bottom: 1rem;
-}
-
-#instructor-info img {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid #ccc;
-}
-
-#instructor-info ul {
-  list-style: none;
-  margin: 0 0 0 1rem;
   padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* To stack the menu and content vertically */
+  justify-content: space-between; /* To distribute space between menu and content */
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
-@media (min-width: 768px) {
-  main {
-    flex-direction: row;
-  }
-
-  section {
-    flex: 1;
-    margin: 0 2rem;
-  }
-
-  .modal {
-    left: calc(50% - 20rem);
-    width: 40rem;
-  }
+.menu {
+  display: flex;
+  justify-content: flex-end; /* Align menu items to the right */
+  padding: 10px;
+  background-color: #FFF; /* Set background color for the menu */
 }
 
-@keyframes float-in {
-  from {
-    transform: translateY(-3rem);
-  }
-  to {
-    transform: translateY(0);
-  }
+.menu ul {
+  list-style-type: none; /* Remove default list bullet */
+  margin: 0;
+  padding: 0;
+  display: flex; /* To create a horizontal menu */
+}
+
+.menu li {
+  margin-right: 50px; /* Adjust spacing between menu items */
+}
+
+.menu li:last-child {
+  margin-right: 0; /* Remove margin from the last menu item */
+}
+
+.menu a {
+  text-decoration: none; /* Remove underline from menu links */
+  color: #4f4949; /* Set font color for menu links */
+  font-size: 20px; /* Adjust font size for menu links */
+  font-weight: 300; /* Set the font weight to lighter (300) */
+}
+
+.menu a:hover {
+  color: #0A5090; /* Set font color for menu links on hover */
+}
+
+.menu li:first-child a {
+  color: #0A5090; /* Set the color for the first menu item ("About") */
+}
+
+.header-title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  color: #333;
+  z-index: 1; /* Ensure the title is on top of the background */
+}
+
+.background {
+  width: 100%;
+  min-height: 90%; /* Use min-height instead of height */
+  background: linear-gradient(to right, #F1E2CA 40%, #FFFFFF 40%);
+  z-index: 0;
+  position: relative; /* Add position: relative */
+}
+
+.hello-world {
+  text-align: left;
+  font-size: 46px; /* Adjust font size for "Hello, world!" */
+  font-weight: bold; /* Set the font weight to bold */
+  color: #333; /* Set font color */
+  position: absolute; /* Position the title */
+  top: 50%; /* Vertically center the title */
+  left: 41%; /* Horizontally center the title */
+  transform: translate(50%, -400%); /* Center the title precisely */
+}
+
+.hello-description {
+  text-align: left;
+  font-size: 22px; /* Adjust font size for the description */
+  color: #333; /* Set font color */
+  position: absolute; /* Position the description */
+  top: calc(20% + 30px); /* Vertically center the description below the "Hello, world!" title */
+  left: 41%; /* Horizontally center the description */
+  transform: translate(50%, 0); /* Center the description precisely */
+}
+
+.resume-button,
+.projects-button {
+  padding: 10px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.resume-button {
+  position: absolute;
+  left: 720px;
+  background-color: #0A5090;
+  color: #FFF;
+  margin-top: 200px;
+  margin-right: 10px;
+  border-radius: 40px;
+}
+
+.projects-button {
+  position: absolute;
+  left: 880px;
+  background-color: transparent;
+  color: #0A5090;
+  margin-top: 200px;
+  border-radius: 40px;
+  border: 2px solid #0A5090;
+}
+
+.resume-button:hover {
+  background-color: transparent;
+  color: #0A5090;
+  border: 2px solid #0A5090;
+}
+
+.projects-button:hover {
+  background-color: #0A5090;
+  color: #FFF;
+  border: none;
+}
+
+.additional-text {
+  position: absolute; /* Position the description */
+  top: calc(30% + 50px); /* Vertically center the description below the "Hello, world!" title */
+  left: 31%; /* Horizontally center the description */
+  transform: translate(50%, 0); /* Center the description precisely */
+  font-size: 18px; /* Adjust font size for the additional text */
+  color: #333; /* Set font color */
+  text-align: left; /* Center the additional text */
+  margin-top: 10px;
+  line-height: 1.6; /* Set the line height for better readability */
+  max-width: 550px; /* Add max-width to limit the width of the paragraph */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.additional-text p {
+  margin: 80px 0; /* Add some spacing between paragraphs */
+}
+
+.additional-text p:first-child {
+  font-weight: bold; /* Make the first paragraph bold */
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+  background-color: #F9F2E7;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  z-index: 1; /* Set the card on top of the background */
+}
+
+.profile-pic {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  margin-top: 30px; /* Add some space on top of the image container */
+}
+
+.profile-pic img {
+  position: absolute;
+  top: 50px;
+  width: 200px; /* Adjust the image size as needed */
+  height: 200px;
+  border-radius: 50%; /* Create a circular shape with 50% border-radius */
+}
+
+.name-role {
+  position: absolute;
+  top: 270px;
+  text-align: center; /* Center the name and role horizontally */
+  margin-top: 10px; /* Add some space between the image and the name-role container */
+}
+
+.name {
+  font-size: 24px; /* Adjust font size for the name */
+  font-weight: bold; /* Set the font weight to bold */
+}
+
+.divider {
+  width: 100px; /* Adjust the length of the line */
+  height: 3px; /* Adjust the thickness of the line */
+  background-color: #0A5090; /* Set the color of the line */
+  margin: 20px auto; /* Center the line horizontally and add some spacing above and below it */
+}
+
+.role {
+  font-size: 30px; /* Adjust font size for the role */
+  font-weight: 300; /* Set the font weight to thin */
+  margin-top: 20px; /* Add some space between the name and the role */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  padding: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
 }

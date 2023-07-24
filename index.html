@@ -1,109 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mekala Vamsi Krishna</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/styles/app.css" />
-	<script src="assets/scripts/app.js" defer></script>
-  </head>
-  <body>
-    <div id="backdrop"></div>
-    <header id="main-header">
-      <h1>Welcome to my webpage - "Mekala Vamsi Krishna"</h1>
-    </header>
-    <main>
-      <section id="about-this-course">
-        <header><h2>About Myself</h2></header>
-        <article>
-          <h2>Who are you?</h2>
-          <p>
-            I am an iOS Developer right now. I have learnt Swift and SwiftUI.
-            I have  built many iOS basic apps in the learning process. 
-          </p>
-          <p>
-            I am studying in BHARATH INSTITUTE of HIGHER EDUCATION and REASEARCH - BIHER.
-            I have started studying B.Tech in the year 2020, Which was lockdown period. In that 
-            lockdown period I have learnt so many new things regarding computer. They are HTML, CSS, C - Programming Language, Swift - iOS Development, MySQL - DBMS.
-          </p>
-        </article>
-        <article>
-          <h2>Why I have chosen, iOS Development as my career?</h2>
-          <p>
-            The first inspiration is my uncle - mamayya, Ravi Krishna. He inspired 
-            me a lot and lot. At first, it became difficult for me to learn iOS development.
-            Slowly, He pushed me into the getting interset of building an iOS apps.
-          </p>
-          <p>
-            But, I will say onething. I am not pro iOS Developer. I used to say that I am a completely leaner of my whole life. 
-          </p>
-          <p>
-            I have seen a lot of struggles in my life. But, I believe that my struggles are very much less as compared to my father's - Mekala Mohana Rao struggle.
-          </p>
-        </article>
-        <article>
-          <h2>My Social Media Platforms</h2>
-          <ul>
-            <li>
-              <strong><a href="https://www.linkedin.com/in/mekala-vamsi-krishna-788220222/">Linkedin Profile</a></strong>
-            </li>
-            <li>
-              <strong><a href="https://github.com/mekala-vamsi-krishna">Github Profile</a></strong>
-            </li>
-          </ul>
-        </article>
-      </section>
-      <section id="about-the-instructor">
-        <header><h2>My Profile</h2></header>
-        <div id="instructor-info">
-          <img
-            src="assets/images/IMG20210917085526.jpg"
-            alt="Image of Mekala Vamsi Krishna"
-          />
-          <ul>
-            <li>Mekala Vamsi Krishna</li>
-            <li><a href="#">@mekala-vamsi-krishna</a></li>
-            <li><a href="#">Mekala Vamsi Krishna.com</a></li>
-          </ul>
+<html>
+<head>
+  <title>Half Background Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/styles/app.css">
+  <script src="assets/scripts/app.js" defer></script>
+</head>
+<body>
+  <div class="menu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="header-title">Mekala Vamsi Krishna / iOS Developer</div>
+  <div class="background">
+    <div class="hello-world">Hello, world!</div> <!-- "Hello, world!" title container -->
+    <div class="hello-description">Here's who I am &amp; What I do</div> <!-- Text description -->
+    <div class="buttons">
+      <a id="resume-download-link" href="/Users/raviyadav/Downloads/Documents/Resumes/Mekala Vamsi Krishna Resume.docx" download><button class="resume-button download-button" onclick="downloadResume()">Resume</button></a>
+      <button class="projects-button">Projects</button>
+    </div>
+    <div class="additional-text">
+      <p>I’m an iOS Developer proficient in Swift, creating innovative and user-centric mobile applications for iOS. Collaborative team player skilled in UI design, feature implementation, and troubleshooting, ensuring high-quality code and optimal performance.</p>
+      <p>Passionate about developing iOS apps and delivering seamless user experiences, and staying ahead of the latest iOS development trends.</p>
+    </div>
+    <div class="card">
+      <div class="profile-pic">
+        <img src="https://avatars.githubusercontent.com/u/68817698?v=4" alt="Profile Picture">
+        <div class="name-role">
+          <div class="name">Mekala Vamsi Krishna</div>
+          <div class="divider"></div> <!-- Horizontal line -->
+          <div class="role">iOS Developer</div>
         </div>
-        <p>
-          Hi! My name is Mekala Vamsi Krishna and I'm an iOS Developer. 
-        </p>
-        
-        <p>
-          <h2>
-            My Daily Routine :
-          </h2>
-          I used to write <b>coding</b> or else <b>Watching good Movies</b>
-        </p>
-        <p>
-          <h2>
-            My Hobbies :
-          </h2>
-          <ul>
-            <li>
-              coding
-            </li>
-            <li>
-              Watching Movies
-            </li>
-            <li>
-              Playing games (Volleyball, Kabaddi, Kho-Kho)
-            </li>
-          </ul>
-        </p>
-        <p>
-          <h2>
-            My Motive :
-          </h2>
-            " I beleive in war not in morality... "
-        </p>
-      </section>
-    </main>
-  </body>
+      </div>
+      <div class="social-icons">
+        <!-- Add your social media icons here -->
+        <a href="#"><img src="https://3.bp.blogspot.com/-nzrqNR1li30/XN0JHcDW05I/AAAAAAAAAlw/Gg5-w_4SeOw76Usm0bD6XX_IuazqgWzQQCLcBGAs/s1600/facebook-logo-Black.png" alt="Facebook"></a>
+        <a href="https://www.linkedin.com/in/mekala-vamsi-krishna-788220222/"><img src="https://www.pngkit.com/png/full/20-201634_linkedin-square-logo-comments-linkedin-icon-black-png.png" alt="Linkedin"></a>
+        <a href="#"><img src="https://iconsplace.com/wp-content/uploads/_icons/000000/256/png/twitter-icon-256.png" alt="Twitter"></a>
+        <a href="mailto:vamsikrishnayadav2002@gmail.com"><img src="https://static.vecteezy.com/system/resources/previews/015/117/360/original/envelope-icon-in-black-colors-mail-signs-illustration-free-png.png" alt="Email"></a>
+        <a href="#"><img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-black-glyph.png" alt="Instagram"></a>
+        <a href="https://github.com/mekala-vamsi-krishna"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <!-- Your content goes here -->
+  </div>
+</body>
 </html>
